@@ -32,7 +32,8 @@ public class Cart {
                     System.out.println("the disc " + dvd2.getTitle() + " has been added.");
                 } else System.out.println("the cart is almost full.");
         } else System.out.println("the cart is almost full.");
-    }
+    }     
+    
 
     public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
         for (int i = 0; i < qtyOrdered; i++) {
