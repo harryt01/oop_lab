@@ -5,6 +5,18 @@ public class DigitalVideoDisc {
     private String director;
     private int length;
     private float cost;
+    private int id;
+
+    private static int nbDigitalVideoDiscs = 0;
+
+    public int getId() {
+        reuturn id;
+    }
+
+    public static int getNbDigitalVideoDiscs() {
+        return nbDigitalVideoDiscs;
+    }
+
     public String getTitle() {
         return title;
     }
@@ -31,12 +43,14 @@ public class DigitalVideoDisc {
 
     public DigitalVideoDisc(String title) {
         this.title = title;
+        incrementNbDiscs();
     }
 
     public DigitalVideoDisc(String title, String category, float cost) {
         this.title = title;
         this.category = category;
         this.cost = cost;
+        incrementNbDiscs();
     }
 
     public DigitalVideoDisc(String title, String category, String director, float cost) {
@@ -44,6 +58,7 @@ public class DigitalVideoDisc {
         this.category = category;
         this.director = director;
         this.cost = cost;
+        incrementNbDiscs();
     }
 
     public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
@@ -52,5 +67,11 @@ public class DigitalVideoDisc {
         this.director = director;
         this.length = length;
         this.cost = cost;
+        incrementNbDiscs();
     }  
+
+    private void incrementNbDiscs() {
+        nbDigitalVideoDiscs++;         //increment class-level counter
+        this.id = nbDigitalVideoDiscs; // Assign unique ID to this instance
+    }
 }
