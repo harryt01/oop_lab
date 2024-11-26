@@ -25,6 +25,10 @@ public class DigitalVideoDisc {
         return cost;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     public DigitalVideoDisc(String title) {
         this.title = title;
     }
@@ -48,6 +52,5 @@ public class DigitalVideoDisc {
         this.director = director;
         this.length = length;
         this.cost = cost;
-    }
-    
+    }  
 }
