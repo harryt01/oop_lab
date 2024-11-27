@@ -13,9 +13,22 @@ public class CartTest {
         DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladdin", "Animation", 18.99f);
         cart.addDigitalVideoDisc(dvd3);
 
+        //test
         //print method
-        
-        //seatch method
-        
+        cart.printCart();
+
+        //search by id
+        System.out.println("\nsearching for DVD with ID 1...");
+        cart.searchDvd(1);
+
+        System.out.println("\nsearching for DVD with ID 9...");
+        cart.searchDvd(9);
+
+        //search by title
+        System.out.println("\nsearching for DVD with title \"Aladdin\"...");
+        cart.searchDvd("Aladdin");
+
+        System.out.println("\nsearching for DVD with title \"Frozen\"...");
+        cart.searchDvd("Frozen");
     }
 }
