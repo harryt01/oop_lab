@@ -1,5 +1,7 @@
 package hust.soict.dsai.aims.store;
 import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+import hust.soict.dsai.aims.cart.Cart;
+
 
 public class Store {
     private static final int MAX_STORE_ITEMS = 69; 
