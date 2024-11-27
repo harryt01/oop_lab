@@ -10,7 +10,7 @@ public class DigitalVideoDisc {
     private static int nbDigitalVideoDiscs = 0;
 
     public int getId() {
-        reuturn id;
+        return id;
     }
 
     public static int getNbDigitalVideoDiscs() {
@@ -73,5 +73,15 @@ public class DigitalVideoDisc {
     private void incrementNbDiscs() {
         nbDigitalVideoDiscs++;         //increment class-level counter
         this.id = nbDigitalVideoDiscs; // Assign unique ID to this instance
+    }
+
+    //override toString() for formatted output
+    @Override
+    public String toString() {
+        return "DVD - " + title + " - " + category + " - " + director + " - " + length + ": " + cost + " $";
+    }
+
+    public boolean isMatch(String title) {
+        return this.title.equalsIgnoreCase(title); //case insensitive
     }
 }
