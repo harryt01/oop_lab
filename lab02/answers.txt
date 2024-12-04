@@ -1,6 +1,0 @@
-lab02
-
-Yes, Java allows you to create multiple constructors for a class.
-This is known as constructor overloading. 
-For example, in the question, you could create a constructor method to build a DVD by title then create a constructor method to build a DVD by category for the DVD class.
-Each constructor should have a different parameter list so Java can differentiate between them.
