@@ -4,15 +4,13 @@ import java.lang.Object;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Book {
-    private int id;
+public class Book extends Media {
+/*    private int id;
     private String title, category;
     private float cost;
     private List<String> authors = new ArrayList<String>();
 
-    public Book(){
-        
-    }
+    //public Book(){}
 
     public int getId() {
         return id;
@@ -30,6 +28,10 @@ public class Book {
         return cost;
     }
 
+    public void setCost(float cost) {
+        this.cost = cost;
+    }
+*/
     public void addAuthors(String authorName){
           if(!authors.contains(authorName)){
             authors.add(authorName);
