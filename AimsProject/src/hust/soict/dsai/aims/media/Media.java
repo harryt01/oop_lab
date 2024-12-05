@@ -34,4 +34,13 @@ public abstract class Media {
         this.category = category;
         this.cost = cost;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        
+        Media media = (Media) obj;
+        return title != null ? title.equals(media.title) : media.title == null;
+    }
 }
