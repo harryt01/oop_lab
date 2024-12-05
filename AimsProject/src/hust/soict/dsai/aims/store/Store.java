@@ -30,14 +30,31 @@ public class Store {
 
     //display all DVDs in the store
     public void printStore() {
-        System.out.println("***********************STORE***********************");
-        if (qtyInStore == 0) {
-            System.out.println("the store is empty.");
+        if (itemsInStore.isEmpty()) {
+            System.out.println("The store is empty.");
         } else {
-            for (int i = 0; i < qtyInStore; i++) {
-                System.out.println((i + 1) + ". " + itemsInStore.get(i).toString());
+            System.out.println("***********************STORE***********************");
+            if (qtyInStore == 0) {
+                System.out.println("the store is empty.");
+            } else {
+                for (int i = 0; i < qtyInStore; i++) {
+                    System.out.println((i + 1) + ". " + itemsInStore.get(i).toString());
+                }
+            }
+            System.out.println("***************************************************");
+        }
+    }
+
+    public Media searchMedia(String title) {
+        for (Media media : itemsInStore) {
+            if (media.getTitle().equalsIgnoreCase(title)) {
+                return media;
             }
         }
-        System.out.println("***************************************************");
+        return null;
     }
+
+    
+
+
 }

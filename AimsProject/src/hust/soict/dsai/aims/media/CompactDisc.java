@@ -5,10 +5,15 @@ import java.util.ArrayList;
 public class CompactDisc extends Disc implements Playable {
     private String artist;
     private ArrayList<Track> tracks = new ArrayList<>();
+    private static int nbCDs = 0;
 
-    public CompactDisc(int id, String title, String category, float cost, int length, String director, String artist) {
-        super(id, title, category, length, director, cost);
+    public CompactDisc(String title, String category, float cost, int length, String director, String artist) {
+        super(++nbCDs, title, category, length, director, cost);
         this.artist = artist;
+    }
+
+    public CompactDisc(String title, String category, float cost){
+        super(++nbCDs, title, category, cost);
     }
 
     public String getArtist() {

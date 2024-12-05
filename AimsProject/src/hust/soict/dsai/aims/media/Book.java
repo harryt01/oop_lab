@@ -7,33 +7,12 @@ import java.util.List;
 
 public class Book extends Media {  
     private List<String> authors = new ArrayList<String>();
-/*   private int id;
-    private String title, category;
-    private float cost;
-  
+    private static int nbBooks = 0;
 
-    //public Book(){}
-
-    public int getId() {
-        return id;
+    public Book(String title, String category, float cost){
+        super(++nbBooks, title, category, cost);
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public float getCost() {
-        return cost;
-    }
-
-    public void setCost(float cost) {
-        this.cost = cost;
-    }
-*/
     public void addAuthors(String authorName){
           if(!authors.contains(authorName)){
             authors.add(authorName);
