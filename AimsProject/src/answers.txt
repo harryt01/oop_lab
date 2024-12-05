@@ -1,32 +1,17 @@
-lab03
-Answer for question in section 3:
-- Is JAVA a Pass by Value or a Pass by Reference programming language? 
-JAVA is a Pass by Value programming language.
+lab04
 
-- After the call of swap(jungleDVD, cinderellaDVD) why does the title of these two objects still remain?
-JAVA is a pass by value programming language, which means the method receive a copy of the parameter and not the parameter itself.
-In the swap() method, o1 and o2 are local variable copies of the references to the jungleDVD and cinderellaDVD objects. 
-Swapping o1 and o2 only changes these local variables in the method. 
-The original references, which are jungleDVD and cinderellaDVD, remain the same.
+- What class should implement the Comparable interface?
+the Media class should implement the Comparable interface because it is the parent class for all media types (Disc, DigitalVideoDisc, CompactDisc, Book) 
+and contains the common fields (id, title, category, cost) used for comparison.
 
-- After the call of changeTitle(jungleDVD, cinderellaDVD.getTitle()) why is the title of the JungleDVD changed?
-Because we update the title of the dvd object using its setTitle() method,
-and dvd is a reference to the original object, this change affects the actual object in memory. 
+- How should you implement the compareTo() method to reflect the ordering that we want?
+we compare the title fields in alphabetical order (case-insensitive).
+if the title fields are the same, compare the cost fields in descending order.
 
-- swap() method that can correctly swap the two objects:
-public static void swap(DigitalVideoDisc[] dvds) {
-    DigitalVideoDisc tmp = dvds[0];
-    dvds[0] = dvds[1];
-    dvds[1] = tmp;
-}
+- Can we have two ordering rules of the item (by title then cost and by cost then title) if we use this Comparable interface approach?
+no, the Comparable interface allows only one natural ordering of objects, as defined by the compareTo() method. 
+to have multiple ordering rules, the Comparator interface is used. 
+the Comparator interface allows defining custom comparison logic different from the natural ordering of the objects.
 
-public static void main(String[] args) {
-    DigitalVideoDisc jungleDVD = new DigitalVideoDisc("Jungle");
-    DigitalVideoDisc cinderellaDVD = new DigitalVideoDisc("Cinderella");
-
-    DigitalVideoDisc[] dvds = {jungleDVD, cinderellaDVD};
-    swap(dvds);
-
-    System.out.println("jungle dvd title: " + dvds[0].getTitle());
-    System.out.println("cinderella dvd title: " + dvds[1].getTitle());
-}
+- Suppose the DVDs have a different ordering rule from the other media types, that is by title, then decreasing length, then cost. How would you modify your code to allow this?
+to make a different ordering rule for DVDs, we can override the compareTo() method specifically in the DigitalVideoDisc class to follow the ordering rule: by title, then by decreasing length, then by cost.
