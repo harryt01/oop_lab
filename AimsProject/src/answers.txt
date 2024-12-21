@@ -15,3 +15,4 @@ the Comparator interface allows defining custom comparison logic different from 
 
 - Suppose the DVDs have a different ordering rule from the other media types, that is by title, then decreasing length, then cost. How would you modify your code to allow this?
 to make a different ordering rule for DVDs, we can override the compareTo() method specifically in the DigitalVideoDisc class to follow the ordering rule: by title, then by decreasing length, then by cost.
+
