@@ -1,8 +1,7 @@
 package hust.soict.dsai.aims.media;
 
-import java.util.ArrayList;
-
 import hust.soict.dsai.aims.exception.PlayerException;
+import java.util.ArrayList;
 
 public class CompactDisc extends Disc implements Playable {
     private String artist;
