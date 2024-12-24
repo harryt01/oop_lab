@@ -41,10 +41,11 @@ public abstract class Media {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
-        
-        Media media = (Media) obj;
-        return title != null ? title.equals(media.title) : media.title == null;
+        if (this == obj) return true; //check if the objects are the same instance
+        if (obj == null) return false; //check for null
+        if (!(obj instanceof Media)) return false; //check for type compatibility
+
+        Media otherMedia = (Media) obj;
+        return title != null ? title.equals(otherMedia.title) : otherMedia.title == null; //compare titles
     }
 }

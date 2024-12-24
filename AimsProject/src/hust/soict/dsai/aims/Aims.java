@@ -1,12 +1,13 @@
 package hust.soict.dsai.aims;
 
+import java.util.Scanner;
+
 import hust.soict.dsai.aims.cart.Cart;
 import hust.soict.dsai.aims.media.Book;
 import hust.soict.dsai.aims.media.CompactDisc;
 import hust.soict.dsai.aims.media.DigitalVideoDisc;
 import hust.soict.dsai.aims.media.Media;
 import hust.soict.dsai.aims.store.Store;
-import java.util.Scanner;
 
 public class Aims {
     private static final Store store = new Store();
